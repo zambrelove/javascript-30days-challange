@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3 | JS Switch Case</title>
+
+    <style>
+        body{
+            text-align: center;
+            background: linear-gradient(#b2e7f9, #f9c4b2);
+            min-height: 100vh;
+        }
+        input[type=number]::-webkit-inner-spin-button,  
+        input[type=number]::-webkit-outer-spin-button { 
+            appearance: none;
+            margin: 0; 
+        }
+        #result{
+            display: inline-block;
+            padding: 20px;
+            text-align: left;
+            min-width: 500px;
+        }
+        input{
+            padding: 5px;
+        }
+        button{
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 3 | Switch Case</h1>
+
+    <section id="wrapper">
+        <h3>As we know Navratri have 9 day. Enter 1 to 9 day as number and get information of that day.</h3>
+        <input type="number" name="" id="day" placeholder="Enter number between 1-9">
+        
+        <button type="submit" onclick="checkColor()">check</button><br>
+
+        <h3 id="result"></h3>
+    </section>
+
+    <script>
+        function checkColor(){
+            let day = document.getElementById('day').value;
+            day=parseInt(day)
+            let result = document.getElementById('result');
+            switch(day){
+                case 1: 
+                    result.innerHTML = 'Day 1 | Date: 15/10/2023 <br> Day 1 Devi name : Shailaputri. <br> Color of the Day is Orange. <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/Shailputri.jpg" width="250"> ';
+                    result.style.backgroundColor = 'orange';
+                break;
+                case 2: 
+                    result.innerHTML = 'Day 2 | Date: 16/10/2023 <br> Day 2 Devi name : Brahmacharini. <br> Color of the Day is White <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/Brahmacharini.jpg" width="250" >';
+                    result.style.backgroundColor = 'white';
+                break;
+                case 3: 
+                    result.innerHTML = 'Day 3 | Date: 17/10/2023 <br> Day 3 Devi name : Chandraghanta. <br> Color of the Day is Red <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/Chandraghanta-2.jpg" width="250" >';
+                    result.style.backgroundColor = 'red';
+                break;
+                case 4: 
+                    result.innerHTML = 'Day 4 | Date: 18/10/2023 <br> Day 4 Devi name : Kushmanda. <br> Color of the Day is Blue <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/kushmanda.jpeg" width="250" >';
+                    result.style.backgroundColor = 'blue';
+                break;
+                case 5: 
+                    result.innerHTML = 'Day 5 | Date: 19/10/2023 <br> Day 5 Devi name : Skandamata. <br> Color of the Day is Yellow <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/Skandamata.jpg" width="250" >';
+                    result.style.backgroundColor = 'yellow';
+                break;
+                case 6: 
+                    result.innerHTML = 'Day 6 | Date: 20/10/2023 <br> Day 6 Devi name : Katyayani. <br> Color of the Day is green <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/Katyayani.jpg" width="250" >';
+                    result.style.backgroundColor = 'green';
+                break;
+                case 7: 
+                    result.innerHTML = 'Day 7 | Date: 21/10/2023 <br> Day 7 Devi name : Kalaratri. <br> Color of the Day is Grey <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/kalratri.jpg" width="250" >';
+                    result.style.backgroundColor = 'grey';
+                break;
+                case 8: 
+                    result.innerHTML = 'Day 8 | Date: 22/10/2023 <br> Day 8 Devi name : Mahagauri. <br> Color of the Day is Purple <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/mahagauri.jpg" width="250" >';
+                    result.style.backgroundColor = 'purple';
+                break;
+                case 9: 
+                    result.innerHTML = 'Day 9 | Date: 23/10/2023 <br> Day 8 Devi name : Siddhidatri. <br> Color of the Day is Peacock <br> <img src="https://leverageedu.com/discover/wp-content/uploads/2023/10/Shiddhidhatri.jpg" width="250" >';
+                    result.style.backgroundColor = '#326872';
+                break;
+                default: 
+                    result.innerHTML = 'Enter Day of 1 to 9';
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

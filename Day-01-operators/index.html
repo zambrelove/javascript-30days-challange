@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Operators | Arithmetic, Assignment, Comparison, Logical Operators</title>
+
+    <style>
+        table{
+            width: 70vw;
+            margin-bottom: 50px;
+        }
+        th,td{
+            padding: 10px;
+        }
+        table, tr, th, td, caption{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .code_preview{
+            font-size: 20px;
+            color: green;
+            text-align: start;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>JavaScript Operators :-</h1>
+        <ul>
+            <li>Arithmetic Operators</li>
+            <li>Assignment Operators</li>
+            <li>Comparison Operators</li>
+            <li>Logical Operators</li>
+        </ul>
+    </section>
+
+    <section class="Arithmetic-operators">
+        <table>
+            <caption><h2>Arithmetic Operators</h2></caption>
+            <tr>
+                <th>Operators</th>
+                <th>Description</th>
+                <th>Use case</th>
+            </tr>
+            <tr>
+                <td><b>+</b></td>
+                <td>Addition</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 20; <br>
+                        let b = 10;<br> 
+                        let c = a + b; <br>
+                        ans = 30;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>-</b></td>
+                <td>Subtraction</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 20; <br>
+                        let b = 10;<br> 
+                        let c = a -  b; <br>
+                        ans = 10;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>*</b></td>
+                <td>Multiplication</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 20; <br>
+                        let b = 10;<br> 
+                        let c = a * b; <br>
+                        ans = 200;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td> <b>**</b> </td>
+                <td>Exponentiation</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 2; <br>
+                        let b = 3;<br> 
+                        let c = a ** b;<br>
+                        ans = 8;
+                    </code>
+                    (2*2*2)
+                </td>
+            </tr>
+            <tr>
+                <td><b>/</b></td>
+                <td>Division</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 20; <br>
+                        let b = 10;<br> 
+                        let c = a / b; <br>
+                        ans = 2;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>%</b></td>
+                <td>Modulus (Reminder)</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 20; <br>
+                        let b = 10;<br> 
+                        let c = a % b; <br>
+                        ans = 0;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>++</b></td>
+                <td>Increment</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 10; <br>
+                        let b = 3;<br> 
+                        a++ <span>(a + 1= 10 + 1 = 11 )</span><br>
+                        console.log ( a (11) + b (3) = 14 ) <br>
+                        ans = 14
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>--</b></td>
+                <td>Decrement</td>
+                <td class="code_preview">
+                    <code>
+                        let a = 10; 
+                        let b = 3;<br> 
+                        a-- <span>(a - 1 = 10 - 1 = 9 )</span><br>
+                        console.log ( a (9) + b (3) = 12 ) <br>
+                        ans = 12
+                    </code>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="Assignment-operators">
+        <table>
+            <caption><h2>Assignment Operators</h2></caption>
+            <tr>
+                <th>Operators</th>
+                <th>Example</th>
+                <th>Same As</th>
+                <th>In Code</th>
+            </tr>
+            <tr>
+                <td><b>=</b></td>
+                <td>x = y</td>
+                <td class="code_preview">
+                    <code>
+                      x = y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                     let  x = 10;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>+=</b></td>
+                <td>x += y</td>
+                <td class="code_preview">
+                    <code>
+                      x = x + y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                    let  x = 10;<br>
+                    let  y = 20;<br>
+                      a += y <br>
+                      Ans = 30; 
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>-=</b></td>
+                <td>x -= y</td>
+                <td class="code_preview">
+                    <code>
+                      x = x - y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                    let  x = 20;<br>
+                    let  y = 10;<br>
+                      a -= y <br>
+                      Ans = 10; 
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>*=</b></td>
+                <td>x *= y</td>
+                <td class="code_preview">
+                    <code>
+                      x = x * y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                    let  x = 10;<br>
+                    let  y = 20;<br>
+                      a *= y <br>
+                      Ans = 200; 
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>/=</b></td>
+                <td>x /= y</td>
+                <td class="code_preview">
+                    <code>
+                      x = x / y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                      let x = 20;<br>
+                      let y = 10;<br>
+                      x/=y <br>
+                      Ans = 2
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>%=</b></td>
+                <td>x %= y</td>
+                <td class="code_preview">
+                    <code>
+                      x = x % y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                      let x = 20;<br>
+                      let y = 10;<br>
+                      x %= y <br>
+                      Ans = 0;
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>**=</b></td>
+                <td>x **= y</td>
+                <td class="code_preview">
+                    <code>
+                      x = x ** y
+                    </code>
+                </td>
+                <td class="code_preview">
+                    <code>
+                      let x = 20;<br>
+                      let y = 10;<br>
+                      x **=y <br>
+                      Ans = 1000
+                    </code>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="Comparison-operators">
+        <table>
+            <caption><h2>Comparison Operators</h2></caption>
+            <tr>
+                <th>Operators</th>
+                <th>Example</th>
+                <th>result (either True or false)</th>
+            </tr>
+            <tr>
+                <td><b>==</b></td>
+                <td>equal to</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10;<br>
+                        let y = 10;<br>
+                        console.log( x == y ) <br>
+                        Ans = true
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>===</b></td>
+                <td>equal value and equal Data type</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ;<br>
+                        let y = '10' ;<br>
+                        console.log( x === y ) <br>
+                        Ans = false
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>!=</b></td>
+                <td>not equal</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ;<br>
+                        let y = 20 ;<br>
+                        console.log( x != y ) <br>
+                        Ans = true
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>!==</b></td>
+                <td>not equal value or not equal type</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ; <br>
+                        let y = '20' ; <br>
+                        console.log(x !== y); <br>
+                        Ans = true
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>></b></td>
+                <td>greater then</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ; <br>
+                        let y = 20 ; <br>
+                        console.log( x > y ); <br>
+                        Ans = false
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b> < </b></td>
+                <td>less then</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ; <br>
+                        let y = 20 ; <br>
+                        console.log( x < y ); <br>
+                        Ans = true
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b>>=</b></td>
+                <td>greater then or equal to</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ; <br>
+                        let y = 20 ; <br>
+                        console.log( x >= y ); <br>
+                        Ans = false
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td><b><=</b></td>
+                <td>less then or equal to</td>
+                <td class="code_preview">
+                    <code>
+                        let x = 10 ; <br>
+                        let y = 20 ; <br>
+                        console.log( x <= y ); <br>
+                        Ans = true
+                    </code>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="Comparison-operators">
+        <table>
+            <caption><h2>Comparison Operators</h2></caption>
+            <tr>
+                <th>Operators</th>
+                <th>Example</th>
+                <th>code</th>
+            </tr>
+            <tr>
+                <td><b>&&</b></td>
+                <td>
+                    Logical AND <br>
+                    <p>code will be run only when both condition ( condition 1 && condition 2 ) will must be True</p>
+                 </td>
+                <td class="code_preview">
+                    <code>
+                       let age = 20; <br>
+
+                       if ( age >= 18 && age <= 21 ) { <br>
+                            console.log ('you are eligible') ;
+                            <br>
+                       }<br>
+                        Ans = you are eligible
+                    </code>
+                    <p>In above example both condition are true, because  age is greater then 18 (condition 1<sup>st</sup> ) and age is Less then 21</p>
+                </td>
+            </tr>
+            <tr>
+                <td><b>||</b></td>
+                <td>
+                    Logical OR <br>
+                    <p>code will be run only when any ONE condition ( condition 1 || condition 2 ) will must be True</p>
+                </td>
+                <td class="code_preview">
+                    <code>
+                        let age = 20; <br>
+ 
+                        if ( age >= 18 || age <= 10 ) { <br>
+                             console.log ('you are eligible') ;
+                             <br>
+                        }<br>
+                         Ans = you are eligible <br>
+                        </code>
+                        <p>In above example condition 1<sup>st</sup> is true. Because age is greater then 18, But 2<sup>nd</sup> condition is false bcoz age is not Less then 10</p>
+                </td>
+            </tr>
+            <tr>
+                <td><b>!</b></td>
+                <td>
+                    Logical NOT <br>
+                    <p>if your condition is True then Logical Operator will answer you in reverse order</p>
+                </td>
+                <td class="code_preview">
+                    <code>
+                        let age = 100; <br>
+                        console.log(! age <= 200); <br>
+                        Ans = true
+                    </code>
+                </td>
+            </tr>
+
+        </table>
+    </section>
+
+
+    <script>
+        let age = 100;
+        console.log(! age <= 200);
+    </script>
+</body>
+</html>

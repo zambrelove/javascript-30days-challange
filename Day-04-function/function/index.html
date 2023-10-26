@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+
+    <style>
+        *{
+            margin: 0px; padding: 0px;
+            box-sizing: border-box;
+        }
+        body {
+            background: linear-gradient(to right, #D7B8F3, #B8B8F3);
+            min-height: 100vh;   display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper,.wrapper2{
+            padding-top: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .box{
+            text-align: center;
+        }
+        input{
+            width: 250px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button{
+            cursor: pointer;
+            padding: 10px 40px;
+        }
+        h1{
+            text-align: center;
+            margin: 15px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Simple Addition, Subtraction, Multification, Division <br> Calculation of Two Number </h1>
+        <div class="box">
+            <input type="number" name="number" title="Enter number" placeholder="Enter number" id="userInputOne"/>
+            <input type="number" name="number" title="Enter number" placeholder="Enter number" id="userInputTwo"/>
+
+            <div class="btnWrapper">
+                <button type="button" title="addittion" onclick="addittion()">Addittion</button>
+                <button type="button" title="subtraction" onclick="subtraction()">Subtraction</button>
+                <button type="button" title="multification" onclick="multification()">Multification</button>
+                <button type="button" title="division" onclick="division()">Division</button>
+            </div>
+        </div>
+        <h1 id="result"></h1>
+    </div>
+    <script>
+        function addittion(){
+            let num1 = document.getElementById('userInputOne').value;
+            let num2 = document.getElementById('userInputTwo').value;
+            var num3 = parseInt(num1) + parseInt(num2);
+
+            var ans = document.getElementById('result').innerHTML = 'addition of ' + `${num1}` + ' and ' + `${num2}` + ' is = ' + num3;
+        }
+        function subtraction(){
+            var num1 = document.getElementById('userInputOne').value;
+            var num2 = document.getElementById('userInputTwo').value;
+            var num3 = num1 - num2;
+
+            var ans = document.getElementById('result').innerHTML = 'subtraction of ' + `${num1}` + ' and ' + `${num2}` + ' is = ' + num3;
+        }
+        function multification(){
+            var num1 = document.getElementById('userInputOne').value;
+            var num2 = document.getElementById('userInputTwo').value;
+            var num3 = num1 * num2;
+
+            var ans = document.getElementById('result').innerHTML = 'multification of ' + `${num1}` + ' and ' + `${num2}` + ' is = ' +num3;
+        }
+        function division(){
+            var num1 = document.getElementById('userInputOne').value;
+            var num2 = document.getElementById('userInputTwo').value;
+            var num3 = num1 / num2;
+
+            var ans = document.getElementById('result').innerHTML = 'division of ' + `${num1}` + ' and ' + `${num2}` + ' is = ' + num3;
+        }
+    </script>
+</body>
+</html>

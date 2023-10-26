@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 | If else</title> 
+
+    <style>
+        body{
+            background: linear-gradient(#b2e7f9, #f9c4b2);
+            min-height: 100vh;
+            text-align: center;
+        }
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            appearance: none;
+            margin: 0; 
+        }
+        input{
+            padding: 5px;
+        }
+        .Wrapper{
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            max-width: 50vw;
+            margin: 0 auto 90px auto;
+            padding: 40px 10px;
+        }
+        button{
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Day 2 | Topic :- If else statement</h1>
+
+    <section class="Wrapper">
+        <h2>Enter number and check given number is Odd or Even</h2>
+        <div>
+            <input type="number" name="num" id="num" title="Enter number" placeholder="Enter Numaric Value"/>
+            <button onclick="check()">check</button><br>
+            <h3 id="answer"></h3>
+        </div>        
+    </section>
+
+   
+    <section class="Wrapper">
+        <h2>check Grade</h2>
+        <div>
+            <input type="number" name="num" id="num1" title="Enter number" placeholder="Enter Numaric Value"/>
+            <button onclick="marks()">check</button><br>
+            <h3 id="answer1"></h3>
+        </div>        
+    </section>
+
+    <script>
+        function check(){
+            let num = document.getElementById('num').value;
+            let ans = document.getElementById('answer');
+
+            if(!num){
+                alert('Please enter numaric value')
+            }
+            
+            else if(num % 2 == 0){
+                ans.innerHTML = 'Given number is Even';
+                ans.style.backgroundColor = 'green';
+                ans.style.color = 'white';
+                ans.style.padding = '10px';
+                ans.style.display = 'inline-block';
+            }
+            
+            else{
+                ans.innerHTML = 'Given number is Odd';
+                ans.style.backgroundColor = 'red';
+                ans.style.color = 'white';
+                ans.style.padding = '10px';
+                ans.style.display = 'inline-block';
+            }
+           }
+
+        function marks(){
+            let mark = document.getElementById('num1').value;
+            let answer = document.getElementById('answer1');
+            if(!mark){
+                alert('please enter value')
+            }
+            else if(mark >= 0 && mark <= 34){
+                answer.innerHTML = 'You are Failed. Study again';
+                answer.style.backgroundColor = 'red';
+                answer.style.color = 'white';
+                answer.style.padding = '10px';
+                answer.style.display = 'inline-block';
+            }
+            else if(mark >= 35 && mark <= 59){
+                answer.innerHTML = "You are in 'C Grade'. Studdy more!!!"
+                answer.style.backgroundColor = 'yellow';
+                answer.style.color = 'black';
+                answer.style.padding = '10px';
+                answer.style.display = 'inline-block';
+            }
+            else if(mark >= 60 && mark <= 89){
+                answer.innerHTML = "You are in 'B Grade'. Good!!!"
+                answer.style.backgroundColor = 'greenyellow';
+                answer.style.color = 'black';
+                answer.style.padding = '10px';
+                answer.style.display = 'inline-block';
+            }
+            else if(mark >= 90 && mark <= 100){
+                answer.innerHTML = "You are in 'A++ Grade'. Congratulation !!!"
+                answer.style.backgroundColor = '#B76E79';
+                answer.style.color = 'white';
+                answer.style.padding = '10px';
+                answer.style.display = 'inline-block';
+            }
+            else if(mark = ''){
+                alert('please enter the number value.')
+            }
+            else{
+                answer.innerHTML= 'Please enter the valid marks in between 0 - 100.'
+            }
+        }
+
+    </script>
+</body>
+</html>

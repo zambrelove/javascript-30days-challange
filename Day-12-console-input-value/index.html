@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting form value</title>
+
+    <style>
+        *{
+            margin: 0px; padding: 0px;
+            box-sizing: border-box;
+            border: none; outline: none;
+        }
+        body{
+            background-image: url('https://images.unsplash.com/photo-1696722532716-b6704e1ded29?');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;           
+        }
+        #my-form{
+            width: 250px;
+            background: rgba( 255, 255, 255, 0.25 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 4px );
+            -webkit-backdrop-filter: blur( 4px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            padding: 50px 0;
+        }
+        input{
+            width: 70%;
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            background-color: transparent;
+            border-bottom: 2px solid black;
+        }
+        button{
+            cursor: pointer;
+            padding: 7px 20px;
+        }
+        ::placeholder{
+            color: black;
+        }
+        button:hover{
+            background-color: aquamarine;
+        }
+        button:active{
+            scale: 0.95;
+        }
+        h3{
+            margin-top: 20px;
+            color: white;
+            padding: 5px;
+        }
+        @media screen and (min-width:768px) {
+            #my-form{
+                width: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="my-form" onsubmit="onFormSubmit(event)">
+        <input type="text" name="firstName" placeholder="First Name" /><br>
+        <input type="text" name="lastName" placeholder="Last Name" /><br>
+        <input type="tel" name="phone" placeholder="Mobile No." /><br>
+        <input type="email" name="email" placeholder="Email" /><br>
+        <button type="submit">Submit</button>
+    </form>
+    <h3>When you fill the form and click on submit button then filled information going to console.</h3>
+
+
+    <script>
+        function onFormSubmit(event) {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            const firstName = data.get("firstName");
+            const lastName = data.get("lastName");
+            const phone = data.get("phone");
+            const email = data.get("email");
+            console.log(`firstName: ${firstName}, lastName: ${lastName}, Phone: ${phone}, Email: ${email}`);
+        }
+    </script>
+</body>
+</html>
