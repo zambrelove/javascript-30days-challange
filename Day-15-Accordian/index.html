@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian using Js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: aliceblue;
+            min-height: 100vh;
+            display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
+            padding: 15px;
+            opacity: 1;
+            font-family: Arial, sans-serif;
+        }
+        .accordion{
+            width: 100%;
+            margin-top: 50px;
+        }
+        .accordion-item{
+            margin-bottom: 25px;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.322);
+        }
+        .accordion-title{
+            font-size: 20px;
+            padding: 10px;
+            cursor: pointer;
+            
+            display: flex; align-items: center; justify-content: space-between;
+        }
+        .accordion-content{
+            background-color: #da911495;
+            padding: 15px 20px;
+            display: none;
+        }
+        
+        .accordion-item.active .accordion-content{
+            display: block;
+            transition: all 60s;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        @media screen and (min-width: 1024px) {
+            .accordion{
+                width: 50%;
+            }   
+        }
+    </style>
+</head>
+<body>
+    <h1>accordion using JavaScript</h1>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Section 1</div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget quam quis eros semper faucibus. Sed velit arcu, semper eget eros vel, tincidunt semper enim. Nulla facilisi. Donec nec quam in enim semper tincidunt. Sed eu magna eu purus semper faucibus.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Section 2</div>
+            <div class="accordion-content">
+                <p>Proin ut est eu enim faucibus faucibus eget ac diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eget ipsum id orci laoreet semper. Nullam et tellus eu magna aliquam consectetur a quis nulla.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Section 3</div>
+            <div class="accordion-content">
+                <p>Sed eget mi vel magna faucibus tincidunt. Sed euismod, nisi vitae faucibus rutrum, lectus tellus tempus velit, eget eleifend lorem arcu eget diam. Mauris ornare, ipsum sit amet bibendum semper, lacus quam faucibus arcu, quis feugiat ante eros id lectus.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Section 4</div>
+            <div class="accordion-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eget quam quis eros semper faucibus. Sed velit arcu, semper eget eros vel, tincidunt semper enim. Nulla facilisi. Donec nec quam in enim semper tincidunt. Sed eu magna eu purus semper faucibus.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Section 5</div>
+            <div class="accordion-content">
+                <p>Proin ut est eu enim faucibus faucibus eget ac diam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam eget ipsum id orci laoreet semper. Nullam et tellus eu magna aliquam consectetur a quis nulla.</p>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-title">Section 6</div>
+            <div class="accordion-content">
+                <p>Sed eget mi vel magna faucibus tincidunt. Sed euismod, nisi vitae faucibus rutrum, lectus tellus tempus velit, eget eleifend lorem arcu eget diam. Mauris ornare, ipsum sit amet bibendum semper, lacus quam faucibus arcu, quis feugiat ante eros id lectus.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const accordionItem = document.querySelectorAll(".accordion-item");
+
+        accordionItem.forEach(function(item) {
+            const title = item.querySelector(".accordion-title");
+            const content = item.querySelector(".accordion-content");
+            const Icon = item.querySelector('fa-solid fa-angle-right')
+            title.addEventListener('click', () => {
+                for (var i = 0; i < accordionItem.length; i++) {
+                    if (accordionItem[i] != item) {
+                        accordionItem[i].classList.remove('active');
+                    }  
+                    else{
+                        item.classList.toggle('active');
+                    }                  
+                }
+            });
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Targeting HTML element in Javascript</title>
+</head>
+<body>
+    <h1>Most using method for target HTML element in Javascript & Add Css properties</h1>
+    <p><strong>How to target :-</strong> First we need to create a Variable in script then assign one of below method for Targeting HTML element in Javascript file</p>
+    <ol>
+        <li>getElementById</li>
+        <li>getElementsByTagName</li>
+        <li>getElementsByClassName</li>
+        <li>CSS Selectors</li>
+    </ol>
+    <p><strong>How to Add Css properties :-</strong> we need to add <strong>.style</strong> access attribute & which css propertie we need to add mention that propertie name = value</p>
+    <h1 id="heading-by-ID">This is heading one (Targeted using ID)</h1>
+    <h2>This is heading Two (Targeted using TagName.) </h2>
+    <h3 class="heading_class">This is secound Heading (Targeted using class)</h3>
+    <h4 class="title">Targeted by CSS Selectors using <b>.className</b> </h4>
+
+
+    <script>
+        // Target by ID
+            const target_ID = document.getElementById('heading-by-ID').style.color = 'red';
+       
+        //  Target by Tag Name  
+            const h2_TagName = document.getElementsByTagName('h2')[0];
+            h2_TagName.style.color = 'green';
+
+        // Target by Class Name
+            const heading_class = document.getElementsByClassName('heading_class')[0];
+            heading_class.style.color = 'blue';
+
+        // Target by CSS Selectors
+            const heading4 = document.querySelectorAll('h4.title')[0];
+            heading4.style.color = 'orange'; 
+    </script>
+</body>
+</html>

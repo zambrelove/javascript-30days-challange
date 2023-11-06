@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="input_Wrapper">
+                <input type="text" name="img" title="img" placeholder="Enter your Image Path" id="userImage">
+                <input type="text" name="Name" title="name" placeholder="Enter Name" id="userName" required/>
+                <input type="text" name="Designation" title="Designation" placeholder="Enter Designation" id="userDesignation" required>
+                <input type="email" name="Email" title="email" placeholder="Enter Email" id="userEmail" required/>
+                <input type="tel" name="Phone" title="phone" placeholder="Enter Phone No." id="userPhone" maxlength="10" required>
+            </div>
+            <div class="btn_wrapper">
+                <button type="button" id="add_btn" onclick="postAPI()">Add data</button>
+                <button type="button" id="edit_btn" onclick="updateAPI()">Update data</button>
+            </div>
+        </header>
+    </div>
+    <div class="container API_data_wrapper" id="wrapper">
+        
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
