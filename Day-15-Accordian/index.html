@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accordian using Js</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
     <link href="https://unpkg.com/pattern.css" rel="stylesheet">
     <style>
         *{
@@ -103,7 +102,6 @@
         accordionItem.forEach(function(item) {
             const title = item.querySelector(".accordion-title");
             const content = item.querySelector(".accordion-content");
-            const Icon = item.querySelector('fa-solid fa-angle-right')
             title.addEventListener('click', () => {
                 for (var i = 0; i < accordionItem.length; i++) {
                     if (accordionItem[i] != item) {
@@ -116,6 +114,5 @@
             });
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
 </body>
 </html>
